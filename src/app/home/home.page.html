@@ -1,0 +1,20 @@
+<ion-header>
+  <app-nav-bar
+  [TitNot]="'NOTICIAS NACHO'"
+  ></app-nav-bar>
+</ion-header> 
+
+<ion-content>
+  <ion-row >
+    <ng-container *ngFor="let noticia of noticias">
+    <ion-col size="12" size-md="6" size-lg="4" class="color-row">
+      <app-news-card
+        [Titulo]="noticia.Titulo"
+        [DescrNot]="noticia.DescrNot"
+        [imag]="noticia.imag"
+        class="imagen200px"
+      ></app-news-card>
+    </ion-col>
+  </ng-container>
+  </ion-row>
+</ion-content>
